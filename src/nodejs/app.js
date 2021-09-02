@@ -19,7 +19,10 @@ var MSG=process.env.MSG || " 👋 Hello from NodeJS ";
 const hostname=process.env.HOSTNAME || "";
 
 
-
+app.get("/health",(req,res) => {
+	console.log("/health");
+	res.send("OK");
+});
 
 app.get('/',(req,res) => {
 	console.log("/root")

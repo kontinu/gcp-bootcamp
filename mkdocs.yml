@@ -6,10 +6,12 @@ nav:
     - Labs 🧪:
       - Home 🏠: 'labs.md'
       - Lab 1️⃣: '1.gcs-webiste.md'
+      - Extra 🚀 : 'from-cloud-shell.md'
       - Lab 2️⃣: '2.gce.md'
       - Lab 3️⃣: '3.gke.md'
       - Lab 4️⃣: '4.app-engine.md'
       - Lab 5️⃣: '5.run.md'
+
 
 
 site_author: Marcos Cano
