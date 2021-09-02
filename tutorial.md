@@ -1,7 +1,7 @@
 # Welcome to our Bootcamp Hands On
 
 
-### 1. gcs static website ⛅
+### 1. Deploy static website using a gcs bucket ⛅
 
 ```bash
 teachme docs/1.gcc-website.md
