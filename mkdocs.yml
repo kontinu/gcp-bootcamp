@@ -1,0 +1,117 @@
+site_name: gcp.bootcamp
+
+nav:
+    - Home 🏠: 'index.md'
+
+    - Labs 🧪:
+      - Lab 1️⃣: '1.gcs-webiste.md'
+      - Lab 2️⃣: '2.gce.md'
+      - Lab 3️⃣: '3.gke.md'
+      - Lab 4️⃣: '4.app-engine.md'
+      - Lab 5️⃣: '5.functions.md'
+
+
+site_author: Marcos Cano
+site_description: GCP Bootcamp.
+
+
+repo_name: gcp.bootcamp
+repo_url: https://github.com/kontinu/gcp-bootcamp.git
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    primary: "blue grey"
+    accent: 'deep orange'
+  logo: 'static/images/brain.png'
+  font:
+    text: 'Space Mono'
+    code: 'Inconsolata'
+  language: 'en'
+  favicon: 'static/images/brain.png'
+  include_sidebar: True
+  # feature:
+  #   tabs: true
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+
+
+
+extra:
+  search:
+    language: 'en'
+  generator: false
+
+copyright: Copyright &copy; 2021 Marcos Cano
+
+
+plugins:
+  - search
+  - git-revision-date
+
+
+
+markdown_extensions:
+  - abbr
+  - pymdownx.keys
+  - attr_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.mark
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.smartsymbols
+  - admonition
+
+# code blocks
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+  ##keep it commented so mermaid works
+  #- pymdownx.extra
+  # - codehilite:
+  #     guess_lang: True
+  #     use_pygments: True
+  #     noclasses: True
+  #     linenums: true
+  #     pygments_style: manni
+
+
+extra_css:
+    - static/css/extra.css
+    - static/css/contact_form.css
+    - https://unpkg.com/mermaid/dist/mermaid.css
+    - static/css/asciinema-player.css
+
+
+
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - static/js/asciinema-player.js
+
+
+
+use_directory_urls: true
