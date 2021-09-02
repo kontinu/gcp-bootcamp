@@ -5,7 +5,7 @@ nav:
 
     - Labs 🧪:
       - Home 🏠: 'labs.md'
-      - Lab 1️⃣: '1.gcs-webiste.md'
+      - Lab 1️⃣: '1.gcs-website.md'
       - Extra 🚀 : 'from-cloud-shell.md'
       - Lab 2️⃣: '2.gce.md'
       - Lab 3️⃣: '3.gke.md'

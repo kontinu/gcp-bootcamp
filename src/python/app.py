@@ -7,15 +7,12 @@ app = Flask(__name__)
 #? BACK
 
 kontinu_msg=os.getenv("MSG"," 👋 Hello from Python 🐍")
+PORT=8080
 
-# Use environment variables
-#import extras.load_env
-
-# load json config files
-#import extras.config_file
-
-# "/health"
-import extras.health
+@app.route("/health")
+def health():
+    print("i'm healthy")
+    return "healthy"
 
 
 
@@ -34,4 +31,4 @@ def root():
 
 if __name__ == '__main__':
     print("==== Starting Python Server ====")
-    app.run(host='0.0.0.0',port=8080,debug=True)
+    app.run(host='0.0.0.0',port=PORT,debug=True)
