@@ -25,7 +25,7 @@ edit_uri: ""
 theme:
   name: material
   palette:
-    primary: "blue grey"
+    primary: "teal"
     accent: 'deep orange'
   logo: 'static/img/google-cloud.png'
   font:
