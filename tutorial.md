@@ -25,8 +25,8 @@ teachme docs/3.gke.md
 teachme docs/4.app-engine.md
 ```
 
-### 5. Deploy the same webapp (hello-world) via Cloud Functions ⛅
+### 5. Deploy the same webapp (hello-world) via Cloud Run ⛅
 
 ```bash
-teachme docs/5.functions.md
+teachme docs/5.run.md
 ```
