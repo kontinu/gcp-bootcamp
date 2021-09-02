@@ -1,32 +1,4 @@
-# Welcome to our Bootcamp Hands On
+# Welcome to our Bootcamp Hands On 👨‍💻
 
+We prepared these couple guided laboratories as a complement to our Remote Bootcamp, to help you understand some of the services that GCP has to offer, of course these services are not the only ones that GCP has to offer.
 
-### 1. gcs static website ⛅
-
-```bash
-teachme docs/1.gcc-website.md
-```
-
-### 2. Deploying a webapp (hello-world) to a Compute Instance 🌧️🌧️
-
-```bash
-teachme docs/2.gce.md
-```
-
-### 3. Deploying a webapp (hello-world) to a Kubernetes Cluster ⛈️⛈️⛈️
-
-```bash
-teachme docs/3.gke.md
-```
-
-### 4. Deploy a webapp (hello-world) via App Engine ⛅
-
-```bash
-teachme docs/4.app-engine.md
-```
-
-### 5. Deploy the same webapp (hello-world) via Cloud Functions ⛅
-
-```bash
-teachme docs/5.functions.md
-```
