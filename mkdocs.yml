@@ -33,10 +33,10 @@ theme:
   include_sidebar: True
   # feature:
   #   tabs: true
-  features:
-    - navigation.tabs
-    - navigation.expand
-    - navigation.top
+  # features:
+  #   - navigation.tabs
+  #   - navigation.expand
+  #   - navigation.top
 
 
 
