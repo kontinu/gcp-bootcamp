@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 #? BACK
 
-kontinu_msg=os.getenv("MSG"," 🐳 Hello")
+kontinu_msg=os.getenv("MSG"," 👋 Hello from Python 🐍")
 
 # Use environment variables
 #import extras.load_env
@@ -17,30 +17,19 @@ kontinu_msg=os.getenv("MSG"," 🐳 Hello")
 # "/health"
 import extras.health
 
-# "/kontinu" in case
-import extras.kontinu
 
-# redis conn
-from extras.redis_connect import nocache, get_hit_count
+
 
 @app.route('/')
-@nocache
 def root():
-    count = get_hit_count()
     host=platform.node()
     foo=os.getenv('FOO', 'unset')
-    REDIS_HOST=os.getenv("REDIS_HOST",'')
-    DOCKER_SERVICE_NAME=os.getenv('DOCKER_SERVICE_NAME', host)
-    if "{{" in DOCKER_SERVICE_NAME or "}}" in DOCKER_SERVICE_NAME:
-        DOCKER_SERVICE_NAME="N/A"
+    version=os.getenv('APP_VERSION', "0.0")
     #print(f"Getting visits! {count}")
     global kontinu_msg
-    try:
-        kontinu_msg=kontinu_msg+extras.kontinu.get_next_msg()
-    except:
-        pass
 
-    return render_template('index.html',visit_counts=count, hostname=host, DOCKER_SERVICE_NAME=DOCKER_SERVICE_NAME, FOO=foo , redis_host=REDIS_HOST, greeting=kontinu_msg)
+
+    return render_template('index.html', hostname=host,  FOO=foo , greeting=kontinu_msg, version=version)
 
 
 
