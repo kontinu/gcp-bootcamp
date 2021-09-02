@@ -1,4 +1,9 @@
+# Kontinu GCP bootcamp
 
+This repository will help you during our bootcamp, will contain a hello-world that we will move between multiple products to see how you can adopt Google Cloud easily.
+
+
+The online documentation if you prefer can be found here
 
 
 [![Open this project in Cloud
