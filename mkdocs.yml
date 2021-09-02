@@ -4,6 +4,7 @@ nav:
     - Home 🏠: 'index.md'
 
     - Labs 🧪:
+      - Home 🏠: 'labs.md'
       - Lab 1️⃣: '1.gcs-webiste.md'
       - Lab 2️⃣: '2.gce.md'
       - Lab 3️⃣: '3.gke.md'

@@ -2,7 +2,7 @@ deploy: git tutorial
 	@python3 -m mkdocs gh-deploy
 
 tutorial:
-	@cp tutorial.md docs/index.md
+	@cp tutorial.md docs/labs.md
 
 git:
 	@git add . || true
