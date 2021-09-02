@@ -7,6 +7,12 @@
 teachme docs/1.gcc-website.md
 ```
 
+### Extra. Run app first in CloudShell
+
+```bash
+teachme docs/from-cloud-shell.md
+``
+
 ### 2. Deploying a webapp (hello-world) to a Compute Instance 🌧️🌧️
 
 ```bash
