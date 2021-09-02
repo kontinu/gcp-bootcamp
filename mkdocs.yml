@@ -24,7 +24,7 @@ theme:
   palette:
     primary: "blue grey"
     accent: 'deep orange'
-  logo: 'static/images/brain.png'
+  logo: 'static/img/brain.png'
   font:
     text: 'Space Mono'
     code: 'Inconsolata'
