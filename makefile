@@ -7,7 +7,7 @@ tutorial:
 git:
 	@git add . || true
 	@git commit -m "auto deploy" || true
-	@git push origin master || true
+	@git push origin main || true
 
 serve:
 	@python3 -m mkdocs serve
