@@ -51,7 +51,8 @@ What if you want to build the node app?
 ```bash
 export LD_LIBRARY_PATH=/usr/local/lib
 
-PROJECT_LANG=nodejs docker-compose build
+export PROJECT_LANG=nodejs
+docker-compose build
 
 ```
 
