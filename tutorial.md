@@ -1,5 +1,6 @@
 # Welcome to our Bootcamp Hands On
 
+You can always follow these tutorials from this [link](https://kontinu.github.io/gcp-bootcamp/)
 
 ### 1. Deploy static website using a gcs bucket ⛅
 
@@ -11,7 +12,7 @@ teachme docs/1.gcc-website.md
 
 ```bash
 teachme docs/from-cloud-shell.md
-``
+```
 
 ### 2. Deploying a webapp (hello-world) to a Compute Instance 🌧️🌧️
 
