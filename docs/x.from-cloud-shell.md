@@ -59,7 +59,7 @@ All together:
 docker-compose up --build
 ```
 
-#### View the app
+### View the app
 
 ![Preview on Port 8080](static/img/preview.png)
 
