@@ -74,3 +74,15 @@ docker-compose up --build
 ![Preview on Port 8080](static/img/preview.png)
 
 Menu > Web Preview > Preview on Port 8080
+
+
+## Last Step
+
+Now that we have our image locally we need to push it to the container registry. Just make sure your image has a tag like this `gcr.io/${GOOGLE_CLOUD_PROJECT}/python-gcp`
+
+
+```bash
+
+docker-compose push
+
+```
