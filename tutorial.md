@@ -5,7 +5,7 @@ You can always follow these tutorials from this [link](https://kontinu.github.io
 ### 1. Deploy static website using a gcs bucket ⛅
 
 ```bash
-teachme docs/1.gcc-website.md
+teachme docs/1.gcs-www.md
 ```
 
 ### Extra. Run app first in CloudShell
