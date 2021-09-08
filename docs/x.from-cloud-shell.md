@@ -55,6 +55,8 @@ PROJECT_LANG=nodejs docker-compose build
 
 ```
 
+This will build/compile a Docker image locally that we can use later to run the app.
+
 
 ## Run the app
 
