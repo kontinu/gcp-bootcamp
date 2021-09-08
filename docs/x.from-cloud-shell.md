@@ -43,6 +43,11 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # using docker-compose (recommended and will build python app)
 docker-compose build
 
+```
+
+What if you want to build the node app?
+
+```bash
 # you want to build the nodejs app?
 PROJECT_LANG=nodejs docker-compose build
 
