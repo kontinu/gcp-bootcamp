@@ -44,6 +44,8 @@ docker-compose build
 
 ```
 
+---
+
 What if you want to build the node app?
 
 ```bash
