@@ -8,8 +8,6 @@ You can always follow these tutorials from this [link](https://kontinu.github.io
 teachme docs/1.gcs-www.md
 ```
 
-[👉](1.gcs-www.md)
-
 ### Extra. Run app first in CloudShell
 
 ```bash
