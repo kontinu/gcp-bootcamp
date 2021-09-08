@@ -4,7 +4,7 @@ services:
   anyApp:
     build:
       context: src/${PROJECT_LANG:-python}
-    image: ${DOCKER_REPO:-kontinu}/${PROJECT_LANG:-python}-expert:v3.0
+    image: gcr.io/${GOOGLE_CLOUD_PROJECT:-kontinu}/${PROJECT_LANG:-python}-gcp:v1.0
     environment:
       - FOO=bar
       - NEXT_URL
