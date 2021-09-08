@@ -2,13 +2,11 @@
 
 You can always follow these tutorials from this [link](https://kontinu.github.io/gcp-bootcamp/)
 
-### 1. [Deploy static website using a gcs bucket ⛅](1.gcs-www.md)
+### 1. Deploy static website using a gcs bucket ⛅
 
 ```bash
 teachme docs/1.gcs-www.md
 ```
-
-
 
 ### Extra. Run app first in CloudShell
 
