@@ -32,11 +32,12 @@ We can actually run the app purely using `python3 app.py` or `node app.js` but t
 
 There seems to be a problem with OpenSSL, docker-compose and cloud-shell, to fix it run:
 
-```
-export LD_LIBRARY_PATH=/usr/local/lib
-```
+
+
 
 ```bash
+export LD_LIBRARY_PATH=/usr/local/lib
+
 # at this point we can build the app using docker build or docker-compose build
 
 # using docker-compose (recommended and will build python app)
