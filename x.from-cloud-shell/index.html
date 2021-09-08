@@ -518,16 +518,17 @@
 <p>We can actually run the app purely using <code>python3 app.py</code> or <code>node app.js</code> but this is the magic of docker, you don't need to install anything other than docker. Also we can isolate different workload types in the same machine disregarding the app dependencies.</p>
 <h2 id="docker-build-the-app">Docker build the app<a class="headerlink" href="#docker-build-the-app" title="Permanent link">&para;</a></h2>
 <p>There seems to be a problem with OpenSSL, docker-compose and cloud-shell, to fix it run:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/usr/local/lib
-</code></pre></div>
-</td></tr></table>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># at this point we can build the app using docker build or docker-compose build</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib
+
+<span class="c1"># at this point we can build the app using docker build or docker-compose build</span>
 
 <span class="c1"># using docker-compose (recommended and will build python app)</span>
 docker-compose build
