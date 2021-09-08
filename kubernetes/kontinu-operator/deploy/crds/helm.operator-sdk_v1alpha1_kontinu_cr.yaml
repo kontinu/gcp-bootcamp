@@ -14,7 +14,7 @@ spec:
   fullnameOverride: ""
   image:
     pullPolicy: IfNotPresent
-    repository: kontinu/python-expert
+    repository: gcr.io/kontinu/python-gcp
     tag: v1.0
   imagePullSecrets: []
   ingress:

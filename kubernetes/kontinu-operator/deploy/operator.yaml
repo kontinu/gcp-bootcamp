@@ -16,7 +16,7 @@ spec:
       containers:
         - name: kontinu-operator
           # Replace this with the built image name
-          image: kontinu/python-expert:v1.0
+          image: gcr.io/kontinu/python-gcp
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
