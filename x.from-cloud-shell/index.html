@@ -523,17 +523,17 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib
 
 <span class="c1"># at this point we can build the app using docker build or docker-compose build</span>
 
 <span class="c1"># using docker-compose (recommended and will build python app)</span>
 docker-compose build
-
-<span class="c1"># you want to build the nodejs app?</span>
+</code></pre></div>
+</td></tr></table>
+<p>What if you want to build the node app?</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># you want to build the nodejs app?</span>
 <span class="nv">PROJECT_LANG</span><span class="o">=</span>nodejs docker-compose build
 </code></pre></div>
 </td></tr></table>
