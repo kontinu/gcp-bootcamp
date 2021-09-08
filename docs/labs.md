@@ -11,7 +11,7 @@ teachme docs/1.gcs-www.md
 ### Extra. Run app first in CloudShell
 
 ```bash
-teachme docs/from-cloud-shell.md
+teachme docs/x.from-cloud-shell.md
 ```
 
 ### 2. Deploying a webapp (hello-world) to a Compute Instance 🌧️🌧️

@@ -2,12 +2,12 @@
 
 ### Primer on Cloud Shell
 
-> Cloud Shell is an online development and operations environment accessible anywhere with your browser. You can manage your resources with its online terminal preloaded with utilities such as the gcloud command-line tool, kubectl, and more. You can also develop, build, debug, and deploy your cloud-based apps using the online Cloud Shell Editor.
+- Cloud Shell is an online development and operations environment accessible anywhere with your browser. You can manage your resources with its online terminal preloaded with utilities such as the gcloud command-line tool, kubectl, and more. You can also develop, build, debug, and deploy your cloud-based apps using the online Cloud Shell Editor.
 
 
-> Manage your Google Cloud resources with the flexibility of a Linux shell. Cloud Shell provides command-line access to a virtual machine instance in a terminal window.
+- Manage your Google Cloud resources with the flexibility of a Linux shell. Cloud Shell provides command-line access to a virtual machine instance in a terminal window.
 
-> Many of your favorite command-line tools from bash and sh to emacs and vim are already pre-installed and kept up to date with Cloud Shell. Admin and development tools such as the gcloud command-line tool, MySql, Kubernetes, Docker, minikube, and Skaffold are configured and ready to use
+- Many of your favorite command-line tools from bash and sh to emacs and vim are already pre-installed and kept up to date with Cloud Shell. Admin and development tools such as the gcloud command-line tool, MySql, Kubernetes, Docker, minikube, and Skaffold are configured and ready to use
 
 ## Getting Started
 
