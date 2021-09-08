@@ -33,14 +33,13 @@ We can actually run the app purely using `python3 app.py` or `node app.js` but t
 There seems to be a problem with OpenSSL, docker-compose and cloud-shell, to fix it run:
 
 
+At this point we can build the app using docker build or docker-compose build
 
+We will choose docker-compose (recommended and will build python app)
 
 ```bash
 export LD_LIBRARY_PATH=/usr/local/lib
 
-# at this point we can build the app using docker build or docker-compose build
-
-# using docker-compose (recommended and will build python app)
 docker-compose build
 
 ```
@@ -50,8 +49,6 @@ What if you want to build the node app?
 ```bash
 export LD_LIBRARY_PATH=/usr/local/lib
 
-
-# you want to build the nodejs app?
 PROJECT_LANG=nodejs docker-compose build
 
 ```
