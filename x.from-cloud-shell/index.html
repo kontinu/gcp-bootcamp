@@ -344,6 +344,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#last-step" class="md-nav__link">
+    Last Step
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -472,6 +479,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#last-step" class="md-nav__link">
+    Last Step
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -518,25 +532,27 @@
 <p>We can actually run the app purely using <code>python3 app.py</code> or <code>node app.js</code> but this is the magic of docker, you don't need to install anything other than docker. Also we can isolate different workload types in the same machine disregarding the app dependencies.</p>
 <h2 id="docker-build-the-app">Docker build the app<a class="headerlink" href="#docker-build-the-app" title="Permanent link">&para;</a></h2>
 <p>There seems to be a problem with OpenSSL, docker-compose and cloud-shell, to fix it run:</p>
+<p>At this point we can build the app using docker build or docker-compose build</p>
+<p>We will choose docker-compose (recommended and will build python app)</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib
 
-<span class="c1"># at this point we can build the app using docker build or docker-compose build</span>
-
-<span class="c1"># using docker-compose (recommended and will build python app)</span>
 docker-compose build
 </code></pre></div>
 </td></tr></table>
+<hr />
 <p>What if you want to build the node app?</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># you want to build the nodejs app?</span>
-<span class="nv">PROJECT_LANG</span><span class="o">=</span>nodejs docker-compose build
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib
+
+<span class="nb">export</span> <span class="nv">PROJECT_LANG</span><span class="o">=</span>nodejs
+docker-compose build
 </code></pre></div>
 </td></tr></table>
+<p>This will build/compile a Docker image locally that we can use later to run the app.</p>
 <h2 id="run-the-app">Run the app<a class="headerlink" href="#run-the-app" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker-compose up
 </code></pre></div>
@@ -548,6 +564,11 @@ docker-compose build
 <h3 id="view-the-app">View the app<a class="headerlink" href="#view-the-app" title="Permanent link">&para;</a></h3>
 <p><img alt="Preview on Port 8080" src="../static/img/preview.png" /></p>
 <p>Menu &gt; Web Preview &gt; Preview on Port 8080</p>
+<h2 id="last-step">Last Step<a class="headerlink" href="#last-step" title="Permanent link">&para;</a></h2>
+<p>Now that we have our image locally we need to push it to the container registry. Just make sure your image has a tag like this <code>gcr.io/${GOOGLE_CLOUD_PROJECT}/python-gcp</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker-compose push
+</code></pre></div>
+</td></tr></table>
                 
                   
                     
