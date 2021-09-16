@@ -80,7 +80,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.smartsymbols
   - admonition
-
 # code blocks
   - pymdownx.snippets
   - pymdownx.inlinehilite
