@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#2-gce" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -284,10 +289,158 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Lab 2️⃣
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Lab 2️⃣
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world-on-compute-engine" class="md-nav__link">
+    Hello World on Compute Engine.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan" class="md-nav__link">
+    Plan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-create-a-vm-on-gce" class="md-nav__link">
+    1. Create a VM on GCE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-install-python3-andor-nodejs-on-the-vm" class="md-nav__link">
+    2. Install python3 and/or node.js on the VM
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Install python3 and/or node.js on the VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-packages" class="md-nav__link">
+    Common packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3" class="md-nav__link">
+    Python3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    Node.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-setup-hello-world-app-provided-in-the-repo" class="md-nav__link">
+    3. Setup hello-world app provided in the repo.
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Setup hello-world app provided in the repo.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs_1" class="md-nav__link">
+    node.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-run-the-app-and-expose-it-on-a-public-ip-address" class="md-nav__link">
+    4. Run the app and expose it on a public IP address.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-can-we-scale" class="md-nav__link">
+    5. Can we scale?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-containers-on-gce" class="md-nav__link">
+    6. Containers on GCE
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Containers on GCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    Further Reading
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -342,20 +495,314 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world-on-compute-engine" class="md-nav__link">
+    Hello World on Compute Engine.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan" class="md-nav__link">
+    Plan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-create-a-vm-on-gce" class="md-nav__link">
+    1. Create a VM on GCE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-install-python3-andor-nodejs-on-the-vm" class="md-nav__link">
+    2. Install python3 and/or node.js on the VM
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Install python3 and/or node.js on the VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-packages" class="md-nav__link">
+    Common packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3" class="md-nav__link">
+    Python3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    Node.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-setup-hello-world-app-provided-in-the-repo" class="md-nav__link">
+    3. Setup hello-world app provided in the repo.
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Setup hello-world app provided in the repo.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs_1" class="md-nav__link">
+    node.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-run-the-app-and-expose-it-on-a-public-ip-address" class="md-nav__link">
+    4. Run the app and expose it on a public IP address.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-can-we-scale" class="md-nav__link">
+    5. Can we scale?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-containers-on-gce" class="md-nav__link">
+    6. Containers on GCE
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Containers on GCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    Further Reading
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Lab 2️⃣</h1>
-                
                 <p>Under Construction 🚧</p>
-<!-- # 2. GCE
-https://medium.com/the-node-js-collection/time-to-hello-world-part2-gce-95e9df907b93
+<h1 id="2-gce">2. GCE<a class="headerlink" href="#2-gce" title="Permanent link">&para;</a></h1>
+<h3 id="pre-requisites">Pre requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>have a basic understanding of linux OS.</li>
+<li>have a basic understanding of bash scripting.</li>
+<li>use package managers or have a basic understanding of how to install packages.</li>
+</ul>
+<h3 id="hello-world-on-compute-engine">Hello World on Compute Engine.<a class="headerlink" href="#hello-world-on-compute-engine" title="Permanent link">&para;</a></h3>
+<p>Compute Engine lets you create and run virtual machines on Google infrastructure. Compute Engine provides control of every component but also assumes it’s your responsibility to keep things running. With VMs, you obviously need to go ahead and install/configure your own web hosting stack from scratch (and also decide how to provide for load balancing and scalability, from a variety of options.)</p>
+<p>The GCP documentation looks extremely useful, but who starts by reading the manual? Google Search to the rescue:</p>
+<ul>
+<li>“google compute engine create a vm”</li>
+<li>“google compute engine ssh into vm”</li>
+<li>“install python linux”</li>
+<li>“hello world python”</li>
+<li>“hello world python google compute engine”…</li>
+</ul>
+<h3 id="plan">Plan<a class="headerlink" href="#plan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create a VM on GCE (Linux obviously)</li>
+<li>Install python3 and/or node.js on the VM.</li>
+<li>Setup hello-world app provided in the repo.</li>
+<li>Run the app and expose it on a public IP address.</li>
+<li>Can we scale?</li>
+</ul>
+<p><img alt="app GCE" src="../static/img/app-gce.png" /></p>
+<h2 id="1-create-a-vm-on-gce">1. Create a VM on GCE<a class="headerlink" href="#1-create-a-vm-on-gce" title="Permanent link">&para;</a></h2>
+<p>Navigate to VM Instances page in Google Cloud Console and go through the setup process.</p>
+<ul>
+<li>Instance name: changed to helloworld-vm</li>
+<li>Machine type: changed to small (1 shared vCPU, 1.7 GB memory)</li>
+<li>Zone: changed to us-west-a (I am based in Seattle, so selected one of the ‘west’ options available)</li>
+<li>Boot disk: Google Debian GNU/Linux 9 (default)</li>
+<li>Firewall: checked to allow both HTTP and HTTPS traffic</li>
+</ul>
+<div class="admonition pricing">
+<p class="admonition-title">Pricing</p>
+<p>$14.20 per month estimated.</p>
+</div>
+<p>Hit the Create button. The VM instance is up and running in literally a few seconds.</p>
+<ul>
+<li>Connect via SSH.</li>
+</ul>
+<p>if you prefer to use gcloud, you can use:</p>
+<ul>
+<li>SSH 🔽: View gcloud command</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>gcloud compute --project <span class="s2">&quot;kontinu&quot;</span> ssh --zone <span class="s2">&quot;us-west1-a&quot;</span> <span class="s2">&quot;helloworld-vm&quot;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="2-install-python3-andor-nodejs-on-the-vm">2. Install python3 and/or node.js on the VM<a class="headerlink" href="#2-install-python3-andor-nodejs-on-the-vm" title="Permanent link">&para;</a></h2>
+<h3 id="common-packages">Common packages<a class="headerlink" href="#common-packages" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install -y curl git
+</code></pre></div>
+</td></tr></table>
+<h3 id="python3">Python3<a class="headerlink" href="#python3" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install -y python3 python3-pip
+python --version
+pip --version
+</code></pre></div>
+</td></tr></table>
+<h3 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h3>
+<p>Google Search: "Installing Node.js Tutorial: Debian Linux"</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+node --version
+npm --version
+</code></pre></div>
+</td></tr></table>
+<h2 id="3-setup-hello-world-app-provided-in-the-repo">3. Setup hello-world app provided in the repo.<a class="headerlink" href="#3-setup-hello-world-app-provided-in-the-repo" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git clone https://github.com/kontinu/gcp-bootcamp.git
+cd gcp-bootcamp/src
+</code></pre></div>
+</td></tr></table>
+<h3 id="python">python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cd python/
+pip3 install -r requirements.txt
+python3 app.py
+</code></pre></div>
+</td></tr></table>
+<h3 id="nodejs_1">node.js<a class="headerlink" href="#nodejs_1" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cd nodejs/
+npm install
+
+node app.js
+</code></pre></div>
+</td></tr></table>
+<hr />
+<h2 id="4-run-the-app-and-expose-it-on-a-public-ip-address">4. Run the app and expose it on a public IP address.<a class="headerlink" href="#4-run-the-app-and-expose-it-on-a-public-ip-address" title="Permanent link">&para;</a></h2>
+<p>I search on <a href="https://www.google.com/search?q=google+compute+engine+open+firewall+ports">“google compute engine open firewall ports”</a>, which brings me to <a href="https://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">StackOverflow</a>. Then I open port 8080 for both http and https using Cloud Console (Networking &gt; VPC Network):</p>
+<p>???
+    note: change https:// to http://</p>
+<h2 id="5-can-we-scale">5. Can we scale?<a class="headerlink" href="#5-can-we-scale" title="Permanent link">&para;</a></h2>
+<p>Compute Engine does offer <a href="https://cloud.google.com/compute/docs/load-balancing-and-autoscaling">load balancing and autoscaling for groups of instances</a> but it requires additional setup, maintenance, as well as general understanding of scalable web architectures and distributed systems design</p>
+<p><img alt="MIG" src="../static/img/mig-overview.png" /></p>
+<p>Things to consider:
+- instance templates
+- Startup-scripts
+- <a href="https://cloud.google.com/compute/docs/instance-groups">MIG</a>
+- <a href="https://cloud.google.com/compute/docs/tutorials/high-availability-load-balancing">Tutorial</a></p>
+<h2 id="6-containers-on-gce">6. Containers on GCE<a class="headerlink" href="#6-containers-on-gce" title="Permanent link">&para;</a></h2>
+<p>Install Docker 🐳</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
 
 
-https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache -->
+sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+</code></pre></div>
+</td></tr></table>
+<p>Startup the application</p>
+<p>Using docker:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker build -f src/python/Dockerfile -t helloworld-python:latest src/python
+docker run -it -p 8080:8080 helloworld-python:latest
+</code></pre></div>
+</td></tr></table></p>
+<p>Using docker-compose
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>docker-compose up --build
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache">https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache</a> &rarr;</li>
+</ul>
+<details class="note"><summary>Note</summary><p>credits to Dmytro Meinyk</p>
+</details>
                 
                   
                     
@@ -364,7 +811,7 @@ https://cloud.google.com/compute/docs/tutorials/basic-webserver-apache -->
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-09-09
+      Last update: 2021-09-15
     
   </small>
 </div>
