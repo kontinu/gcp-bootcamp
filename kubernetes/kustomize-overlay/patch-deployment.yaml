@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: my-app
+  name: my-app
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: my-app
+      containers:
+      - image: gcr.io/my-project/python-gcp:v1.0
+        name: my-app
