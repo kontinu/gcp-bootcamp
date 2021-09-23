@@ -5,5 +5,10 @@ namePrefix: kustom-
 
 bases:
 - ../manifests
-patchesStrategicMerge:
-- patch-deployment.yaml
+
+# patchesStrategicMerge:
+# - patch-deployment.yaml
+images:
+  - name: gcr.io/kontinu/python-gcp
+    newName: gcr.io/my-project/python-gcp
+    newTag: v1.0
