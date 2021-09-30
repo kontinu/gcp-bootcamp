@@ -1,6 +1,8 @@
 FROM python:3.7-alpine
 
 ENV PYTHONUNBUFFERED True
+ARG version=0.0
+ENV APP_VERSION=$version
 
 WORKDIR /app
 COPY requirements.txt /app
