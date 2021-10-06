@@ -9,8 +9,8 @@ nav:
       - Extra 🚀 (cloud shell) : 'x.from-cloud-shell.md'
       - Lab 2️⃣ (GCE): '2.gce.md'
       - Lab 3️⃣ (GKE): '3.gke.md'
-      - Lab 4️⃣: '4.app-engine.md'
-      - Lab 5️⃣: '5.run.md'
+      - Lab 4️⃣ (CloudRun 🏃‍♂️): '4.run.md'
+      - Lab 5️⃣ (App Engine): '5.app-engine.md'
 
 
 

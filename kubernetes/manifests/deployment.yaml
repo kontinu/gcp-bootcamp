@@ -5,7 +5,7 @@ metadata:
   labels:
     name:  my-app
 spec:
-  replicas: 2
+  replicas: 5
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -27,6 +27,7 @@ spec:
           requests:
             cpu: "20m"
             memory: "55M"
+            #Probes
         livenessProbe:
           httpGet:
             path: /health
