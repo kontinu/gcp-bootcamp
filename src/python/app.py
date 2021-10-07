@@ -7,7 +7,7 @@ app = Flask(__name__)
 #? BACK
 
 kontinu_msg=os.getenv("MSG"," 👋 Hello from Python 🐍")
-color=os.getenv("COLOR","white")
+color=os.getenv("COLOR","green")
 PORT=8080
 
 @app.route("/health")

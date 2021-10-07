@@ -13,7 +13,7 @@ var MSG=process.env.MSG || " 👋 Hello from NodeJS ";
 
 const hostname=process.env.HOSTNAME || "";
 const version=process.env.APP_VERSION || "0.0";
-const color=process.env.COLOR || "black";
+const color=process.env.COLOR || "green";
 
 
 app.get("/health",(req,res) => {
