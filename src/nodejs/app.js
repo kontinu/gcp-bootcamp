@@ -12,7 +12,7 @@ const app = express();
 var MSG=process.env.MSG || " 👋 Hello from NodeJS ";
 
 const hostname=process.env.HOSTNAME || "";
-const version=process.env.APP_VERSION || "0.0.0";
+const version=process.env.APP_VERSION || "0.0";
 
 
 app.get("/health",(req,res) => {
