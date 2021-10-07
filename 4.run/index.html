@@ -658,7 +658,22 @@ gcloud run deploy --tag green &lt;your-name&gt;-app
 </code></pre></div>
 </td></tr></table></p>
 </div>
-<p>Some additional options</p>
+<h1 id="deploying-an-existing-container-image-to-cloudrun">Deploying an existing container image to CloudRun<a class="headerlink" href="#deploying-an-existing-container-image-to-cloudrun" title="Permanent link">&para;</a></h1>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/usr/local/lib
+
+version=1.0
+docker-compose build
+docker-compose push
+
+gcloud run deploy my-app --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/python-gcp:v${version}
+</code></pre></div>
+</td></tr></table>
 <p>!!!? Help
     <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
