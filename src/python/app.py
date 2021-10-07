@@ -7,6 +7,7 @@ app = Flask(__name__)
 #? BACK
 
 kontinu_msg=os.getenv("MSG"," 👋 Hello from Python 🐍")
+color=os.getenv("COLOR","white")
 PORT=8080
 
 @app.route("/health")
@@ -25,7 +26,7 @@ def root():
     global kontinu_msg
 
 
-    return render_template('index.html', hostname=host,  FOO=foo , greeting=kontinu_msg, version=version)
+    return render_template('index.html', hostname=host,  FOO=foo , greeting=kontinu_msg, version=version, color=color)
 
 
 

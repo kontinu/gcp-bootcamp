@@ -11,6 +11,7 @@ services:
     environment:
       - FOO=bar
       - NEXT_URL
+      # - COLOR=green
     init: true
 
     ports:

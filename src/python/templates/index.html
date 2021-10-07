@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
     <style>
-        body{
-            font-family: "Exo", sans-serif;
+        h5 {
+          font-size: 40px;
+          color:{{color}};
+          font-weight: 1000;
         }
     </style>
     <head>
@@ -19,7 +21,6 @@
             <br>
 
             <h1> {{greeting}} </h1>
-            <h2> Version: {{version}}</h2>
             <br>
 
                 <h3>Hostname:  {{hostname}}</h3>
@@ -29,6 +30,10 @@
               {% if  redis_host %}
                 <h3>Redis: {{redis_host}}</h3>
               {% endif %}
+              <h5>
+                Version: {{version}}
+              </h5>
+
 
             <br>
             <h4><a href="https://linktr.ee/kontinu">kontinu</a></h2>

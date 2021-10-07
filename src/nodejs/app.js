@@ -13,6 +13,7 @@ var MSG=process.env.MSG || " 👋 Hello from NodeJS ";
 
 const hostname=process.env.HOSTNAME || "";
 const version=process.env.APP_VERSION || "0.0";
+const color=process.env.COLOR || "black";
 
 
 app.get("/health",(req,res) => {
@@ -22,7 +23,7 @@ app.get("/health",(req,res) => {
 
 app.get('/',(req,res) => {
 	console.log("/root")
-  res.send(`<div style="text-align: center;"> <h1>${MSG}</h1><br> <h2> Hostname: ${hostname} </h2> <h3>version: ${version} </h3> </div>`);
+  res.send(`<div style="text-align: center;"> <h1>${MSG}</h1><br> <h2> Hostname: ${hostname} </h2> <h3 style="color:${color};">version: ${version} </h3> </div>`);
 })
 
 app.listen(PORT, () => {
