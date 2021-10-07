@@ -627,12 +627,10 @@ https://medium.com/google-cloud/knative-to-cloud-run-f0ed1617e256
 <h1 id="what-you-will-learn-in-this-lab">What you will learn in this lab<a class="headerlink" href="#what-you-will-learn-in-this-lab" title="Permanent link">&para;</a></h1>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> What is Cloud Run.</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> What you need to deploy and run your workloads to CloudRun.</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to IaC in Cloud Run using Knative.</p>
-</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> What you need to deploy and run your workloads to CloudRun.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Build and Run on CloudRun</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Deploying an existing container image to CloudRun</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to IaC in Cloud Run using Knative.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Extensible options for Knative.</li>
 </ul>
 <h1 id="things-you-need">Things you need<a class="headerlink" href="#things-you-need" title="Permanent link">&para;</a></h1>
@@ -640,13 +638,17 @@ https://medium.com/google-cloud/knative-to-cloud-run-f0ed1617e256
 <li>Dockerfile</li>
 <li>sample source code.</li>
 </ul>
-<h1 id="hands-on">Hands On<a class="headerlink" href="#hands-on" title="Permanent link">&para;</a></h1>
+<h1 id="build-and-run-on-cloudrun">Build and Run on CloudRun<a class="headerlink" href="#build-and-run-on-cloudrun" title="Permanent link">&para;</a></h1>
 <p>In Cloud Shell run the following commands:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cd src/python
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># echo gsutil mb gs://${GOOGLE_CLOUD_PROJECT}_cloudbuild
 
-gcloud run deploy --tag green &lt;your-name&gt;
+cd src/python
+
+gcloud run deploy --tag green &lt;your-name&gt;-app
 </code></pre></div>
 </td></tr></table>
 <div class="admonition note">
@@ -657,7 +659,8 @@ gcloud run deploy --tag green &lt;your-name&gt;
 </td></tr></table></p>
 </div>
 <p>Some additional options</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p>!!!? Help
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -697,31 +700,31 @@ gcloud run deploy --tag green &lt;your-name&gt;
         [--service-account=SERVICE_ACCOUNT] [--tag=TAG] [--timeout=TIMEOUT]
         [--no-traffic] [--[no-]use-http2]
         [--clear-env-vars | --set-env-vars=[KEY=VALUE,...]
-          | --remove-env-vars=[KEY,...] --update-env-vars=[KEY=VALUE,...]]
+        | --remove-env-vars=[KEY,...] --update-env-vars=[KEY=VALUE,...]]
         [--clear-labels | --remove-labels=[KEY,...] --labels=[KEY=VALUE,...]
-          | --update-labels=[KEY=VALUE,...]]
+        | --update-labels=[KEY=VALUE,...]]
         [--clear-secrets | --set-secrets=[KEY=VALUE,...]
-          | --remove-secrets=[KEY,...] --update-secrets=[KEY=VALUE,...]]
+        | --remove-secrets=[KEY,...] --update-secrets=[KEY=VALUE,...]]
         [--connectivity=CONNECTIVITY --clear-config-maps
-          | --set-config-maps=[KEY=VALUE,...] | --remove-config-maps=[KEY,...]
-          --update-config-maps=[KEY=VALUE,...]]
+        | --set-config-maps=[KEY=VALUE,...] | --remove-config-maps=[KEY,...]
+        --update-config-maps=[KEY=VALUE,...]]
         [--image=IMAGE | --source=SOURCE]
         [--[no-]allow-unauthenticated --breakglass=JUSTIFICATION
-          --clear-vpc-connector --revision-suffix=REVISION_SUFFIX
-          --vpc-connector=VPC_CONNECTOR --vpc-egress=VPC_EGRESS
-          --add-cloudsql-instances=[CLOUDSQL-INSTANCES,...]
-          | --clear-cloudsql-instances
-          | --remove-cloudsql-instances=[CLOUDSQL-INSTANCES,...]
-          | --set-cloudsql-instances=[CLOUDSQL-INSTANCES,...]
-          --binary-authorization=POLICY
-          | --clear-binary-authorization --clear-key
-          | --key=KEY --clear-post-key-revocation-action-type
-          | --post-key-revocation-action-type=POST_KEY_REVOCATION_ACTION_TYPE]
+        --clear-vpc-connector --revision-suffix=REVISION_SUFFIX
+        --vpc-connector=VPC_CONNECTOR --vpc-egress=VPC_EGRESS
+        --add-cloudsql-instances=[CLOUDSQL-INSTANCES,...]
+        | --clear-cloudsql-instances
+        | --remove-cloudsql-instances=[CLOUDSQL-INSTANCES,...]
+        | --set-cloudsql-instances=[CLOUDSQL-INSTANCES,...]
+        --binary-authorization=POLICY
+        | --clear-binary-authorization --clear-key
+        | --key=KEY --clear-post-key-revocation-action-type
+        | --post-key-revocation-action-type=POST_KEY_REVOCATION_ACTION_TYPE]
         [--region=REGION
-          | --cluster=CLUSTER --cluster-location=CLUSTER_LOCATION
-          | --context=CONTEXT --kubeconfig=KUBECONFIG] [GCLOUD_WIDE_FLAG ...]
+        | --cluster=CLUSTER --cluster-location=CLUSTER_LOCATION
+        | --context=CONTEXT --kubeconfig=KUBECONFIG] [GCLOUD_WIDE_FLAG ...]
 </code></pre></div>
-</td></tr></table>
+</td></tr></table></p>
                 
                   
                     
