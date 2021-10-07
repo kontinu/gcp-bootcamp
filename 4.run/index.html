@@ -630,9 +630,11 @@ https://medium.com/google-cloud/knative-to-cloud-run-f0ed1617e256
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> What you need to deploy and run your workloads to CloudRun.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Build and Run on CloudRun</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Deploying an existing container image to CloudRun</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to IaC in Cloud Run using Knative.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Extensible options for Knative.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Do a Blue/Green deployment</li>
 </ul>
+<!-- - [x] How to IaC in Cloud Run using Knative.
+- [x] Extensible options for Knative. -->
+
 <h1 id="things-you-need">Things you need<a class="headerlink" href="#things-you-need" title="Permanent link">&para;</a></h1>
 <ul>
 <li>Dockerfile</li>
@@ -640,15 +642,21 @@ https://medium.com/google-cloud/knative-to-cloud-run-f0ed1617e256
 </ul>
 <h1 id="build-and-run-on-cloudrun">Build and Run on CloudRun<a class="headerlink" href="#build-and-run-on-cloudrun" title="Permanent link">&para;</a></h1>
 <p>In Cloud Shell run the following commands:</p>
+<p>Clone the repo:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git clone https://github.com/kontinu/gcp-bootcamp.git
+cd gcp-bootcamp
+</code></pre></div>
+</td></tr></table></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># echo gsutil mb gs://${GOOGLE_CLOUD_PROJECT}_cloudbuild
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>gsutil mb -l us-east1 gs://playground-s-11-f2943b62_cloudbuild
 
 cd src/python
 
-gcloud run deploy --tag green &lt;your-name&gt;-app
+gcloud run deploy --region=us-east1 --tag green &lt;your-name&gt;-app
 </code></pre></div>
 </td></tr></table>
 <div class="admonition note">
@@ -659,19 +667,77 @@ gcloud run deploy --tag green &lt;your-name&gt;-app
 </td></tr></table></p>
 </div>
 <h1 id="deploying-an-existing-container-image-to-cloudrun">Deploying an existing container image to CloudRun<a class="headerlink" href="#deploying-an-existing-container-image-to-cloudrun" title="Permanent link">&para;</a></h1>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/usr/local/lib
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/usr/local/lib
 
-version=1.0
+gcloud auth configure-docker us-east1-docker.pkg.dev
+
+gcloud artifacts repositories create python-gcp --location=us-east1 --repository-format=docker
+
+
+export version=1.0
+export color=blue
 docker-compose build
+
 docker-compose push
 
-gcloud run deploy my-app --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/python-gcp:v${version}
+gcloud run deploy my-app --region=us-east1 --tag $color --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
+</code></pre></div>
+</td></tr></table>
+<h1 id="blue-green-deployment">Blue Green Deployment<a class="headerlink" href="#blue-green-deployment" title="Permanent link">&para;</a></h1>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># Deploy BLUE VERSION
+export color=blue
+export version=$color
+docker-compose build
+
+docker-compose push
+
+gcloud run deploy rollout-app --allow-unauthenticated --region=us-east1 --tag $color --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
+
+# Deploy GREEN VERSION
+export color=green
+export version=$color
+docker-compose build
+
+docker-compose push
+
+gcloud run deploy rollout-app --allow-unauthenticated --region=us-east1 --tag $color  --no-traffic --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
+
+
+# update traffic
+gcloud run services update-traffic rollout-app --to-tags green=1
 </code></pre></div>
 </td></tr></table>
 <details class="help"><summary>Help</summary><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -748,7 +814,7 @@ gcloud run deploy my-app --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/python-gcp:v${ve
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-10-06
+      Last update: 2021-10-07
     
   </small>
 </div>
