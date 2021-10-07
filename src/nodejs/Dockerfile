@@ -1,5 +1,6 @@
 FROM node:14-alpine
 
+ENV APP_VERSION=0.0.0
 # Create app directory
 WORKDIR /usr/src/app
 
