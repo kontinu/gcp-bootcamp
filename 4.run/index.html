@@ -653,11 +653,11 @@ cd gcp-bootcamp
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>gsutil mb -l us-east1 gs://playground-s-11-f2943b62_cloudbuild
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>gsutil mb -l us-east1 gs://${GOOGLE_CLOUD_PROJECT}_cloudbuild
 
 cd src/python
 
-gcloud run deploy --region=us-east1 --tag green &lt;your-name&gt;-app
+gcloud run deploy --region=us-east1 --tag main &lt;your-name&gt;-app
 </code></pre></div>
 </td></tr></table>
 <div class="admonition note">
@@ -681,7 +681,11 @@ gcloud run deploy --region=us-east1 --tag green &lt;your-name&gt;-app
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/usr/local/lib
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cd ~/gcp-bootcamp
+
+export LD_LIBRARY_PATH=/usr/local/lib
 
 gcloud auth configure-docker us-east1-docker.pkg.dev
 
@@ -718,9 +722,15 @@ gcloud run deploy my-app --region=us-east1 --tag $color --image=us-east1-docker.
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># Deploy BLUE VERSION
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cd ~/gcp-bootcamp
+export LD_LIBRARY_PATH=/usr/local/lib
+
+# Deploy BLUE VERSION
 export color=blue
-export version=$color
+export version=1.0
 docker-compose build
 
 docker-compose push
@@ -729,7 +739,7 @@ gcloud run deploy rollout-app --allow-unauthenticated --region=us-east1 --tag $c
 
 # Deploy GREEN VERSION
 export color=green
-export version=$color
+export version=2.0
 docker-compose build
 
 docker-compose push
