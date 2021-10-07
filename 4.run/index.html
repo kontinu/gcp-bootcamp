@@ -698,7 +698,7 @@ docker-compose build
 
 docker-compose push
 
-gcloud run deploy my-app --region=us-east1 --tag $color --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
+gcloud run deploy &lt;your-name&gt;-my-app --region=us-east1 --tag $color --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
 </code></pre></div>
 </td></tr></table>
 <h1 id="blue-green-deployment">Blue Green Deployment<a class="headerlink" href="#blue-green-deployment" title="Permanent link">&para;</a></h1>
@@ -735,7 +735,7 @@ docker-compose build
 
 docker-compose push
 
-gcloud run deploy rollout-app --allow-unauthenticated --region=us-east1 --tag $color --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
+gcloud run deploy &lt;your-name&gt;-rollout-app --allow-unauthenticated --region=us-east1 --tag $color --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
 
 # Deploy GREEN VERSION
 export color=green
@@ -744,7 +744,7 @@ docker-compose build
 
 docker-compose push
 
-gcloud run deploy rollout-app --allow-unauthenticated --region=us-east1 --tag $color  --no-traffic --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
+gcloud run deploy &lt;your-name&gt;-rollout-app --allow-unauthenticated --region=us-east1 --tag $color  --no-traffic --image=us-east1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/python-gcp/app:v${version}
 
 
 # update traffic
