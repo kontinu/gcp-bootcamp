@@ -3,8 +3,8 @@ FROM python:3.7-alpine
 ENV PYTHONUNBUFFERED True
 ARG version=0.0
 ENV APP_VERSION=$version
-ARG COLOR
-ENV COLOR=$COLOR
+ARG color
+ENV COLOR=$color
 
 WORKDIR /app
 COPY requirements.txt /app

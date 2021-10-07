@@ -6,6 +6,7 @@ services:
       context: src/${PROJECT_LANG:-python}
       args:
         version: ${version:-1.0}
+        color: ${color}
     image: ${REGISTRY:-us-east1-docker.pkg.dev}/${GOOGLE_CLOUD_PROJECT:-kontinu}/${PROJECT_LANG:-python}-gcp/app:v${version:-1.0}
     #image: gcr.io/${GOOGLE_CLOUD_PROJECT:-kontinu}/${PROJECT_LANG:-python}-gcp:v${version:-1.0}
     environment:

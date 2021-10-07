@@ -2,8 +2,8 @@ FROM node:14-alpine
 
 ARG version=0.0
 ENV APP_VERSION=$version
-ARG COLOR
-ENV COLOR=$COLOR
+ARG color
+ENV COLOR=$color
 
 # Create app directory
 WORKDIR /usr/src/app
