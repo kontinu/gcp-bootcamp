@@ -549,16 +549,16 @@
 <ul>
 <li>
 <p>Python3
-<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/python/app.py">
+<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/python/main.py">
 </walkthrough-editor-open-file></p>
 </li>
 <li>
 <p>NodeJs
-<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/nodejs/app.js">
+<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/nodejs/server.js">
 </walkthrough-editor-open-file></p>
 </li>
 </ul>
-<p>We can actually run the app purely using <code>python3 app.py</code> or <code>node app.js</code> but this is the magic of docker, you don't need to install anything other than docker. Also we can isolate different workload types in the same machine disregarding the app dependencies.</p>
+<p>We can actually run the app purely using <code>python3 main.py</code> or <code>node server.js</code> but this is the magic of docker, you don't need to install anything other than docker. Also we can isolate different workload types in the same machine disregarding the app dependencies.</p>
 <h2 id="docker-build-the-app">Docker build the app<a class="headerlink" href="#docker-build-the-app" title="Permanent link">&para;</a></h2>
 <p>There seems to be a problem with OpenSSL, docker-compose and cloud-shell, to fix it run:</p>
 <p>At this point we can build the app using docker build or docker-compose build</p>
@@ -606,7 +606,7 @@ docker-compose build
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-09-08
+      Last update: 2021-10-14
     
   </small>
 </div>
