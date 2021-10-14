@@ -21,4 +21,4 @@ RUN npm install && npm install -g pm2
 COPY . .
 
 EXPOSE 8080
-ENTRYPOINT [ "pm2-docker", "app.js" ]
+ENTRYPOINT [ "pm2-docker", "server.js" ]
