@@ -17,16 +17,16 @@
 There are two versions of the app:
 
 - Python3
-<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/python/app.py">
+<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/python/main.py">
 </walkthrough-editor-open-file>
 
 
 - NodeJs
-<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/nodejs/app.js">
+<walkthrough-editor-open-file filePath="~/gcp-bootcamp/src/nodejs/server.js">
 </walkthrough-editor-open-file>
 
 
-We can actually run the app purely using `python3 app.py` or `node app.js` but this is the magic of docker, you don't need to install anything other than docker. Also we can isolate different workload types in the same machine disregarding the app dependencies.
+We can actually run the app purely using `python3 main.py` or `node server.js` but this is the magic of docker, you don't need to install anything other than docker. Also we can isolate different workload types in the same machine disregarding the app dependencies.
 
 ## Docker build the app
 
