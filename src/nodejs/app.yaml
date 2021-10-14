@@ -1,4 +1,3 @@
-service: node-bootcamp-app1
 env_variables:
   FOO: "Hello from App Engine"
 runtime: nodejs14

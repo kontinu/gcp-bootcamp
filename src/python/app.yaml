@@ -1,5 +1,3 @@
-service: py-bootcamp-app1
-
 runtime: python39
 env_variables:
   FOO: "Hello from App Engine"
