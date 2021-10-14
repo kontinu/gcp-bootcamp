@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import Flask, make_response, render_template
+from flask import Flask, render_template
 import os, platform
 
 app = Flask(__name__)
