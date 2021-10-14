@@ -1,5 +1,5 @@
 runtime: python39
-entrypoint: app.py
+#entrypoint: app.py
 env_variables:
   FOO: "Hello from App Engine"
 manual_scaling:
