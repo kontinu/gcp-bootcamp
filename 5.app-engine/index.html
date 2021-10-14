@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#app-engine" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -348,10 +353,56 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Lab 5️⃣ (App Engine)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Lab 5️⃣ (App Engine)
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-languages-for-standard-environments" class="md-nav__link">
+    supported languages for standard environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appyaml" class="md-nav__link">
+    app.yaml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy" class="md-nav__link">
+    Deploy
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -371,16 +422,78 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-languages-for-standard-environments" class="md-nav__link">
+    supported languages for standard environments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appyaml" class="md-nav__link">
+    app.yaml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy" class="md-nav__link">
+    Deploy
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Lab 5️⃣ (App Engine)</h1>
-                
                 <p>Under Construction 🚧</p>
 <!-- https://medium.com/the-node-js-collection/time-to-hello-world-part4-gae-17408c0ef5f6 -->
+
+<h1 id="app-engine">App Engine<a class="headerlink" href="#app-engine" title="Permanent link">&para;</a></h1>
+<p>App Engine is a framework and computing platform for developing and hosting web applications in Google-managed data centers. App Engine offers automatic scaling — as the number of requests increases, it automatically allocates more resources for the application to handle the additional demand.
+A quick look at the docs indicates that App Engine provides standard and flexible environment</p>
+<h2 id="supported-languages-for-standard-environments">supported languages for standard environments<a class="headerlink" href="#supported-languages-for-standard-environments" title="Permanent link">&para;</a></h2>
+<p><a href="https://cloud.google.com/appengine/docs">https://cloud.google.com/appengine/docs</a></p>
+<h2 id="appyaml">app.yaml<a class="headerlink" href="#appyaml" title="Permanent link">&para;</a></h2>
+<p><a href="https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml">https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml</a></p>
+<h2 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git clone https://github.com/kontinu/gcp-bootcamp.git
+cd gcp-bootcamp/src/nodejs
+
+gcloud app deploy
+</code></pre></div>
+</td></tr></table>
                 
                   
                     
@@ -389,7 +502,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-10-06
+      Last update: 2021-10-14
     
   </small>
 </div>
