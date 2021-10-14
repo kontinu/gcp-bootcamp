@@ -483,7 +483,50 @@ A quick look at the docs indicates that App Engine provides standard and flexibl
 <h2 id="supported-languages-for-standard-environments">supported languages for standard environments<a class="headerlink" href="#supported-languages-for-standard-environments" title="Permanent link">&para;</a></h2>
 <p><a href="https://cloud.google.com/appengine/docs">https://cloud.google.com/appengine/docs</a></p>
 <h2 id="appyaml">app.yaml<a class="headerlink" href="#appyaml" title="Permanent link">&para;</a></h2>
-<p><a href="https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml">https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml</a></p>
+<p>Full documentation <a href="https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml">here</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">runtime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python39</span>
+<span class="c1">#entrypoint: app.py</span>
+<span class="nt">env_variables</span><span class="p">:</span>
+  <span class="nt">FOO</span><span class="p">:</span> <span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">App</span><span class="nv"> </span><span class="s">Engine&quot;</span>
+<span class="nt">manual_scaling</span><span class="p">:</span>
+   <span class="nt">instances</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">resources</span><span class="p">:</span>
+   <span class="nt">cpu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+   <span class="nt">memory_gb</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.5</span>
+   <span class="nt">disk_size_gb</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">handlers</span><span class="p">:</span>
+  <span class="c1"># This configures Google App Engine to serve the files in the app&#39;s static</span>
+  <span class="c1"># directory.</span>
+<span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/static</span>
+  <span class="nt">static_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">static</span>
+  <span class="c1"># This handler routes all requests not caught above to your main app. It is</span>
+  <span class="c1"># required when static routes are defined, but can be omitted (along with</span>
+  <span class="c1"># the entire handlers section) when there are no static files defined.</span>
+<span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/.*</span>
+  <span class="nt">script</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">auto</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
